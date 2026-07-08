@@ -13,9 +13,9 @@ export const ConnectToSocket = (server) => {
             credentials: true, 
         }
     });
-
+    
     socket_io.on("connection", (socket) => {
-        console.log("Connected"); 
+        console.log("Connected; ", socket); 
         // console.log(socket);
         socket.on("join-call", (path) => {
             if(connections[path] === "undefined"){
