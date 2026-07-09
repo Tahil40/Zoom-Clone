@@ -1,7 +1,7 @@
-import { UserModel } from "../models/user.model";
+import { UserModel } from "../models/user.model.js";
 import httpStatus from "http-status";
 import bcrypt from "bcrypt";
-import crypto from crypto;
+import crypto from "crypto";
 
 const login_user = async (req, res) => {
     const {username, password} = req.body;
